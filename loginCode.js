@@ -15,7 +15,7 @@ function checkCreds() {
 
     if(fullNameLength >= 21 || fullNameLength < 3) {
         document.getElementById("loginStatus").innerHTML = "that name isnt right, man"
-    } else if(badgeID > 999 || badgeID <= 0) {
+    } else if(badgeID > 999 || badgeID <= 0 || typeof(badgeID) !== int) {
         document.getElementById("loginStatus").innerHTML = "thats not a proper badge ID"
     } else {
         alert("yea thats all fine, come on in " + fullName);
